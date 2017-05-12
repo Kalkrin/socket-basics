@@ -17,13 +17,15 @@ socket.on('connect', function() {
 
 socket.on('message', function(message) {
     var momentTimestamp = message.timestamp;
-    var $message = jQuery('.messages');
+    var $messages = jQuery('.messages');
+    var $message = jQuery('<li class="list-group-item"></li')
 	var timestampMoment = moment.utc(momentTimestamp);
 	var localTimestamp = timestampMoment.local().format('h:mm a');
     console.log('new message: ' + message.text);
 
     $message.append('<p><strong>' + message.name + ' ' + localTimestamp + '</strong ></p > ');
     $message.append('<p>' + message.text + '</p>');
+    $messages.append($message);
 });
 
 //handles submitting of new message
