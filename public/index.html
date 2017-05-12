@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Socket.io Basics</title>
-
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
-   <h1>Join Chat</h1>
 
-    <form action="/chat.html">
-        
-        <label>Display Name</label>
-        <input type="text" name="name"/> <br />
-        <label>Room Name</label>
-        <input type="text" name="room"/>
-        <input type="submit" value="Join Chat" />
+    <div class="vertical-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 well">
+                    <form action="/chat.html">
+                        <h1>Join Chat</h1>
+                        <div class="form-group">
+                            <label for="displayName">Display Name</label>
+                            <input type="text" class="form-control" name="name" id="displayName" placeholder="Display Name" />
+                        </div>
 
-    </form>
+                        <div class="form-group">
+                            <label for="chatRoomName">Room Name</label>
+                            <input type="text" class="form-control" name="room" id="chatRoomName" 
+                            placeholder="Chat Room" />
+                        </div>
+                        
+                         <input type="submit"  class="btn btn-primary btn-block" value="Join Chat" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
